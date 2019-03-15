@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.hande.goochao.views.components.refresh.MySmartRefreshLayout
+        android:id="@+id/design_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hande.goochao.views.widget.GoochaoListView
+            android:id="@+id/design_inspiration_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:divider="@color/WHITE"
+            android:dividerHeight="14dp"
+            android:scrollbars="none">
+
+        </com.hande.goochao.views.widget.GoochaoListView>
+
+    </com.hande.goochao.views.components.refresh.MySmartRefreshLayout>
+
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/design_inspiration_load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+    <com.hande.goochao.views.components.NoDataView
+        android:id="@+id/design_noDataView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.NoDataView>
+
+    <com.hande.goochao.views.components.LoadingView
+        android:id="@+id/inspiration_design_loading"
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.hande.goochao.views.components.LoadingView>
+
+</RelativeLayout>

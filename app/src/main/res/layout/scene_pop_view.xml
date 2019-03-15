@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scene_detail_pop_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/praise_close"
+        android:src="@mipmap/new_icon_close"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="24dp"
+        android:layout_height="24dp" />
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:layout_below="@id/praise_close"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/scene_pop_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:canLoop="true" />
+
+        <TextView
+            android:layout_below="@+id/scene_pop_banner"
+            android:id="@+id/scene_pop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/Black_Gray"
+            android:textSize="@dimen/x_large" />
+
+        <TextView
+            android:layout_below="@+id/scene_pop_name"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:id="@+id/scene_pop_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black_button_selected"
+            android:textSize="@dimen/normal" />
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/scene_pop_tag_layout"
+            android:layout_below="@+id/scene_pop_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp">
+
+        </com.zhy.view.flowlayout.TagFlowLayout>
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <EditText
+                android:id="@+id/scene_pop_edit"
+                android:layout_width="270dp"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="255"
+                android:imeOptions="actionDone"
+                android:layout_centerVertical="true"
+                android:hint="喜欢我？就对我表白吧"
+                android:textColor="@color/Black_Gray"
+                android:textColorHint="@color/gray_add"
+                android:textSize="@dimen/normal" />
+
+            <View
+                android:layout_marginTop="35dp"
+                android:background="@color/gray_add"
+                android:layout_width="270dp"
+                android:layout_height="0.5dp"/>
+
+            <LinearLayout
+                android:id="@+id/default_like_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/heart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加入喜欢"
+                    android:textColor="@color/new_product_detail"
+                    android:textSize="@dimen/small" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/had_like_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/new_icon_like" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已喜欢"
+                    android:textColor="@color/black_button_selected"
+                    android:textSize="@dimen/small" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

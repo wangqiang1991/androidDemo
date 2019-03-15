@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:splitMotionEvents="false"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/home_furniture_left_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingRight="5dp">
+
+        <com.hande.goochao.views.components.ZoomView
+            android:id="@+id/furniture_left_zoom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:scaleView="@id/home_furniture_left">
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/home_furniture_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.hande.goochao.views.components.ZoomView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_furniture_right_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:splitMotionEvents="false"
+        android:paddingLeft="5dp">
+
+        <com.hande.goochao.views.components.ZoomView
+            android:id="@+id/furniture_right_top_zoom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:scaleView="@id/home_furniture_rightTop">
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/home_furniture_rightTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+        </com.hande.goochao.views.components.ZoomView>
+
+        <com.hande.goochao.views.components.ZoomView
+            android:id="@+id/furniture_right_bottom_zoom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:scaleView="@id/home_furniture_rightBottom">
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/home_furniture_rightBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.hande.goochao.views.components.ZoomView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.hande.goochao.views.components.LoadingView
+        android:background="@color/WHITE"
+        android:visibility="gone"
+        android:id="@+id/search_picture_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.hande.goochao.views.components.LoadingView>
+
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/load_fail_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+    <com.hande.goochao.views.components.NoDataView
+        android:id="@+id/no_data_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"></com.hande.goochao.views.components.NoDataView>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.hande.goochao.views.widget.GoochaoGridView
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:id="@+id/picture_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="false"
+            android:background="@color/WHITE"
+            android:numColumns="2">
+
+        </com.hande.goochao.views.widget.GoochaoGridView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

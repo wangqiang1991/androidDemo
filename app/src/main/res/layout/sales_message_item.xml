@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/Line_Color">
+
+    <TextView
+        android:id="@+id/sales_message_date"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/new_product_detail"
+        android:textSize="@dimen/medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:background="@drawable/information_center_item_background"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/sales_message_name"
+            android:layout_margin="15dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/Black_Gray"
+            android:textSize="@dimen/large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.hande.goochao.views.components.ZoomView
+            android:id="@+id/sales_message_zoom_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:scaleView="@id/sales_message_cover">
+
+            <ImageView
+                android:id="@+id/sales_message_cover"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.hande.goochao.views.components.ZoomView>
+
+
+        <TextView
+            android:id="@+id/sales_message_desc"
+            android:textSize="@dimen/normal"
+            android:textColor="@color/TAB_GRAY"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="@color/Line_DarkGray_Color"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:id="@+id/txt_chakanhuodongxiangqing"
+                android:text="查看活动详情"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/Black_Gray"
+                android:textSize="@dimen/medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"/>
+
+            <ImageView
+                android:src="@mipmap/information_center_right"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

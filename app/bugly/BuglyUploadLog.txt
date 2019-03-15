@@ -1,0 +1,7 @@
+file=E:\shu\gouchao_for_android\app\build\outputs\mapping\yingyongbao\debug\mapping.txt
+sha1=31eb4ec228d0e2ab4f8aba8ccbadcf8c345e88c2
+appId=9eb919543a
+appChannel=yingyongbao
+appPackage=com.hande.goochao
+appVersion=2.1.3
+

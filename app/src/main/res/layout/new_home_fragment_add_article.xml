@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.hande.goochao.views.components.ZoomView
+            android:id="@+id/recommend_article_zoom_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:scaleView="@id/article_cover">
+
+            <ImageView
+                android:background="@drawable/corners_view"
+                android:id="@+id/article_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </com.hande.goochao.views.components.ZoomView>
+
+        <Button
+            android:id="@+id/type_bt"
+            android:textSize="@dimen/small"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="bottom|right"
+            android:enabled="false"
+            android:background="@drawable/home_fragment_recommend_bt"
+            android:text="期刊"
+            android:textColor="@color/WHITE"
+            android:layout_width="48dp"
+            android:layout_height="15dp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/item_back_f6f6f6"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+</LinearLayout>

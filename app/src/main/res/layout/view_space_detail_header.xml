@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp">
+
+    <ImageView android:layout_width="match_parent"
+        android:id="@+id/space_detail_background_image"
+        android:layout_height="180dp"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/space_detail_background"
+        android:paddingLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/space_name"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/xx_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:ellipsize="end"
+            android:paddingTop="20dp"
+            android:textStyle="bold" />
+
+        <TextView android:textColor="@color/WHITE"
+            android:textSize="@dimen/normal"
+            android:text="场景介绍"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp" />
+
+        <TextView android:id="@+id/space_description"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingRight="30dp"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:ellipsize="end"
+            />
+
+        <TextView android:id="@+id/see_more"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看完整介绍"
+            android:background="@drawable/border_bottom"
+            android:paddingTop="10dp"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

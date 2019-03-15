@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hande.goochao.views.activity.DesignPlanDetailActivity">
+
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/design_detail_load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+    <ImageView
+        android:id="@+id/detail_design_loading_page"
+        android:visibility="visible"
+        android:clickable="true"
+        android:background="@mipmap/loading_plan_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/icon_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/new_design_plan_back_black" />
+
+        <TextView
+            android:id="@+id/page_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_toLeftOf="@+id/middle_icon"
+            android:textColor="@color/Black_Gray"
+            android:textSize="@dimen/large" />
+
+        <TextView
+            android:id="@+id/middle_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_toLeftOf="@+id/all_page_icon"
+            android:text="/"
+            android:textColor="@color/new_product_detail"
+            android:textSize="@dimen/large" />
+
+        <TextView
+            android:id="@+id/all_page_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/new_product_detail"
+            android:textSize="@dimen/medium" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/loop_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.hande.goochao.views.widget.tablayout.TabLayout
+            android:id="@+id/design_plan_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:tabBackground="@color/WHITE"
+            app:tabIndicatorColor="@color/Black_Gray"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/Black_Gray"
+            app:tabTextColor="@color/new_product_detail" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@mipmap/line_shadow"
+            android:src="@color/Line_Color" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/design_plan_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

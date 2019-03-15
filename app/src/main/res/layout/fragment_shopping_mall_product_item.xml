@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/goods_list_data_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/goods_item_background"
+    android:orientation="vertical">
+
+    <com.hande.goochao.views.components.ZoomView
+        android:id="@+id/category_goods_zoom_view"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:scaleView="@id/produceImage">
+
+        <ImageView
+            android:id="@+id/produceImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:padding="4dp" />
+
+    </com.hande.goochao.views.components.ZoomView>
+
+    <TextView
+        android:id="@+id/produceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:textColor="@color/Black_Gray"
+        android:textSize="@dimen/normal" />
+
+    <TextView
+        android:id="@+id/produceIntroduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:textColor="@color/new_product_detail"
+        android:textSize="@dimen/medium" />
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/producePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/Black_Gray"
+            android:textSize="@dimen/normal" />
+
+        <TextView
+            android:id="@+id/old_price"
+            android:layout_marginLeft="2dp"
+            android:visibility="gone"
+            android:textColor="@color/new_product_detail"
+            android:textSize="@dimen/small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/discount_view"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:textSize="@dimen/x_small"
+        android:background="#F94E4E"
+        android:textColor="@color/WHITE"
+        android:layout_width="45dp"
+        android:layout_height="15dp" />
+
+    <TextView
+        android:id="@+id/sale_out_view"
+        android:visibility="invisible"
+        android:textSize="@dimen/x_small"
+        android:textColor="#F94E4E"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/sale_red_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+

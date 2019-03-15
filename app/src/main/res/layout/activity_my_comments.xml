@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Line_Color"
+    android:orientation="vertical"
+    tools:context="com.hande.goochao.views.activity.MyCommentsActivity">
+
+    <com.hande.goochao.views.components.LoadingView
+        android:background="@color/WHITE"
+        android:id="@+id/my_comments_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.hande.goochao.views.components.LoadingView>
+
+    <LinearLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:padding="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="我的评价"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/x_large" />
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="@style/myRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="@color/BLACK"
+            android:rating="3"
+            android:stepSize="1.0" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/comment_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/WHITE"
+        android:minLines="5"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:text="无"
+        android:textColor="@color/DEFAULT_GRAY"
+        android:textSize="@dimen/normal"
+        android:visibility="gone">
+
+    </TextView>
+
+    <FrameLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/WHITE"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <com.hande.goochao.views.components.ImageBox
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="3dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:verticalSpacing="3dp">
+
+        </com.hande.goochao.views.components.ImageBox>
+
+    </FrameLayout>
+
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/load_fail_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+</LinearLayout>

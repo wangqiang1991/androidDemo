@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.hande.goochao.views.components.ZoomView
+        android:id="@+id/second_category_zoom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:scaleView="@id/second_category_cover">
+
+        <ImageView
+            android:id="@+id/second_category_cover"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"/>
+
+    </com.hande.goochao.views.components.ZoomView>
+
+    <TextView
+        android:id="@+id/second_category_name"
+        android:textSize="13sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/BLACK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

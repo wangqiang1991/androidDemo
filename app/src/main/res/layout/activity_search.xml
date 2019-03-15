@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hande.goochao.views.activity.SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/search_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_edit_circular_draw"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/new_search" />
+
+            <com.hande.goochao.views.components.ClearEditText
+                android:id="@+id/search_edit"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="搜索商品、图片"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/normal">
+
+                <requestFocus></requestFocus>
+            </com.hande.goochao.views.components.ClearEditText>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="取消"
+            android:textColor="@color/DEFAULT_GRAY"
+            android:textSize="@dimen/large" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Line_Color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_view"
+        app:layout_constraintVertical_bias="0.0"></View>
+
+    <ScrollView
+        android:id="@+id/search_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.hande.goochao.views.components.NoScrollListView
+                android:id="@+id/goods_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/Line_Color"
+                android:dividerHeight="1dp"
+                android:splitMotionEvents="false"
+                android:visibility="gone">
+
+            </com.hande.goochao.views.components.NoScrollListView>
+
+            <View
+                android:id="@+id/goods_line_view"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/Line_Color"
+                android:visibility="gone"></View>
+
+            <com.hande.goochao.views.components.NoScrollListView
+                android:id="@+id/picture_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/Line_Color"
+                android:dividerHeight="1dp"
+                android:visibility="gone">
+
+            </com.hande.goochao.views.components.NoScrollListView>
+
+            <View
+                android:id="@+id/picture_line_view"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/Line_Color"
+                android:visibility="gone"></View>
+
+            <RelativeLayout
+                android:id="@+id/history_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="搜索历史"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/large" />
+
+                <ImageView
+                    android:id="@+id/history_del_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/search_del" />
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/search_history_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/history_del_btn"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/hot_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="热门搜索"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/large" />
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/hot_search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"></com.zhy.view.flowlayout.TagFlowLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/search_result_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_view">
+
+        <view
+            android:id="@+id/search_goods_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            class="com.hande.goochao.views.widget.SearchGoodsView" />
+
+        <view
+            android:id="@+id/search_picture_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            class="com.hande.goochao.views.widget.SearchPictureView" />
+
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

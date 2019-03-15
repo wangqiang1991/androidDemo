@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    tools:context="com.hande.goochao.views.activity.OrderCouponActivity">
+
+    <ListView
+        android:id="@+id/coupon_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:divider="@color/WHITE"
+        android:dividerHeight="15dp">
+
+    </ListView>
+
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/load_fail_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+    <com.hande.goochao.views.components.LoadingView
+        android:background="@color/WHITE"
+        android:id="@+id/order_coupon_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.hande.goochao.views.components.LoadingView>
+
+    <com.hande.goochao.views.components.NoDataView
+        android:id="@+id/order_coupon_nodata"
+        android:background="@color/WHITE"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.hande.goochao.views.components.NoDataView>
+
+</FrameLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/cancel_coupon"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/coupon_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="50dp"
+        android:background="@color/WHITE"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/coupon_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/Black_Gray"
+        android:gravity="center"
+        android:text="全部领取"
+        android:textColor="@color/WHITE"
+        android:textSize="@dimen/large" />
+
+</RelativeLayout>

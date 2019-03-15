@@ -1,0 +1,210 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.hande.goochao"
+        minSdkVersion 21
+        targetSdkVersion 27
+        multiDexEnabled true
+        versionCode 25
+        versionName "2.6.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips'
+            manifestPlaceholders = [
+                    XG_ACCESS_ID : "2100315434",
+                    XG_ACCESS_KEY: "AHE12E22J5NT",
+                    PACKAGE_NAME:"com.hande.goochao",
+
+                    HW_APPID     : "100241207",
+
+//                    XG_ACCESS_ID : "2100314068",
+//                    XG_ACCESS_KEY: "AM5VI537UL5W",  //测试
+            ]
+        }
+    }
+
+    //在apk文件后边生成版本号信息
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                outputFileName = "app_" + buildType.name + "_v${defaultConfig.versionName}-v${defaultConfig.versionCode}.apk"
+            }
+    }
+
+    signingConfigs {
+        certificateConfig {
+            storeFile file("release.jks")
+            keyAlias "goochao"
+            storePassword "Hd85678699"
+            keyPassword "Hd85678699"
+        }
+    }
+
+    buildTypes {
+        // 生产环境
+        release {
+            buildConfigField "String", "APP_ID", "\"wxb46445654e217eac\""
+            buildConfigField "String", "APP_SECRET", "\"ea7ac29fc315137694e03eb7d478bf59\""
+            buildConfigField "String", "REST_DOMAIN", "\"https://wx.goochao.com\""
+            signingConfig signingConfigs.certificateConfig
+            debuggable true
+            minifyEnabled true
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        // 开发环境
+        debug {
+            buildConfigField "String", "APP_ID", "\"wx688089b523d36ea4\""
+            buildConfigField "String", "APP_SECRET", "\"ddaca8fd37ed502172e83a5458b1d66f\""
+//            buildConfigField "String", "REST_DOMAIN", "\"http://192.168.20.104:8808\""
+            buildConfigField "String", "REST_DOMAIN", "\"http://192.168.20.102:8080\""
+            signingConfig signingConfigs.certificateConfig
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        // 测试环境
+        env_test.initWith(debug)
+        env_test {
+            buildConfigField "String", "APP_ID", "\"wx688089b523d36ea4\""
+            buildConfigField "String", "APP_SECRET", "\"ddaca8fd37ed502172e83a5458b1d66f\""
+            buildConfigField "String", "REST_DOMAIN", "\"http://test.wx.goochao.com\""
+            signingConfig signingConfigs.certificateConfig
+            debuggable true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+//        oppo {
+//            manifestPlaceholders = [CHANNEL_VALUE: "oppo"]
+//        }
+//        xiaomi {
+//            manifestPlaceholders = [CHANNEL_VALUE: "xiaomi"]
+//        }
+//        qh360 {
+//            manifestPlaceholders = [CHANNEL_VALUE: "qh360"]
+//        }
+//        baidu {
+//            manifestPlaceholders = [CHANNEL_VALUE: "baidu"]
+//        }
+//        huawei {
+//            manifestPlaceholders = [CHANNEL_VALUE: "huawei"]
+//        }
+        yingyongbao {
+            manifestPlaceholders = [CHANNEL_VALUE: "yingyongbao"]
+        }
+    }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        // 使用本地libs文件夹做为仓库
+        dirs "libs"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:27.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    // 工程依赖
+    compile 'org.xutils:xutils:3.5.0'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+    // IO公共类库
+    compile 'commons-io:commons-io:2.4'
+    // 本地缓存
+    compile 'com.jakewharton:disklrucache:2.0.2'
+    // log4j
+    compile 'log4j:log4j:1.2.17-atlassian-1'
+    compile 'de.mindpipe.android:android-logging-log4j:1.0.3'
+    // 微信SDK
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    // android json框架
+    compile 'com.google.code.gson:gson:1.7.1'
+    // 1.0.0升级为2.1.3解决内存泄漏问题，原因是执行动画repeat次数为-1
+    compile('com.wang.avi:library:2.1.3') {
+        // 排除appcompat-v7,解决冲突
+        exclude module: 'appcompat-v7', group: 'com.android.support'
+    }
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5-alpha-1'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5-alpha-1'
+
+    compile 'com.android.support:cardview-v7:27.0.2'
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+    compile 'com.hyman:flowlayout-lib:1.1.2'
+
+    //仿京东地址弹窗
+    compile 'com.github.ywp0919:AddressPickerLib:1.0.1'
+    // EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'commons-lang:commons-lang:2.5'
+//    compile 'jp.wasabeef:blurry:2.1.1'
+    compile(name: 'multi.image.selector', ext: 'aar')
+    // 七牛SDK
+    compile 'com.qiniu:qiniu-android-sdk:7.3.+'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'com.androidkun:XTabLayout:1.1.4'
+    compile 'com.github.traex.expandablelayout:library:1.3'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+    compile 'in.srain.cube:grid-view-with-header-footer:1.0.12'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+
+    //DSBridge
+    compile 'com.github.wendux:DSBridge-Android:x5-3.0-SNAPSHOT'
+
+    //信鸽jar，不包含厂商通道
+    compile 'com.tencent.xinge:xinge:4.0.3-release'
+    //信鸽jar，包含厂商通道
+    compile 'com.tencent.xinge:xinge:4.0.3-otherpush-release'
+    //jg包
+    compile 'com.tencent.jg:jg:1.1'
+    //wup包
+    compile 'com.tencent.wup:wup:1.0.0.E-release'
+    //mid包
+    compile 'com.tencent.mid:mid:4.0.7'
+
+    //智齿客服
+    compile 'com.sobot.chat:sobotsdk:2.6.7'
+    compile 'com.squareup.okhttp3:okhttp:3.11.0'
+
+    /* 华为 3.2.7-release版
+     * 注意：若华为通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.7-Release
+     */
+    compile 'com.tencent.xinge:xghw:3.2.7-release'
+
+    /* 小米3.2.7-release版
+     * 注意：若小米通道使用此版本,则信鸽sdk版本也需要同时使用v3.2.7-Release
+     */
+    compile 'com.tencent.xinge:mipush:3.2.7-release'
+}

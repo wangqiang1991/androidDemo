@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/Line_Color"
+    android:layout_height="match_parent">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/recommend_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hande.goochao.views.components.HeaderGridView
+            android:id="@+id/productGridView"
+            android:layout_width="match_parent"
+            android:splitMotionEvents="false"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="1dp"
+            android:numColumns="2"
+            android:verticalSpacing="1dp">
+
+        </com.hande.goochao.views.components.HeaderGridView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/load_fail_view"
+        android:visibility="gone"
+        android:background="@color/WHITE"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+</RelativeLayout>

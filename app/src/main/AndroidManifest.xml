@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hande.goochao">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".GoochaoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/gc_ic_launcher"
+        android:label="@string/app_display_name"
+        android:roundIcon="@mipmap/gc_ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label,android:icon">
+
+        <meta-data
+            android:name="CHANNEL"
+            android:value="${CHANNEL_VALUE}" />
+
+        <activity
+            android:name=".views.activity.WelcomeActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:label="@string/app_display_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.activity.RefreshListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.TestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.ProductListActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:screenOrientation="portrait">
+
+            <!-- 商品列表 -->
+        </activity>
+        <activity
+            android:name=".views.activity.LoginActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 登录 -->
+        </activity>
+        <activity
+            android:name=".views.activity.RegisterActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 注册 -->
+        </activity>
+        <activity
+            android:name=".views.activity.SnitchActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 打小报告 -->
+        </activity>
+        <activity
+            android:name=".views.activity.PersonalInformationActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 个人中心 -->
+        </activity>
+        <activity
+            android:name=".views.activity.LikesActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 喜欢 -->
+        </activity>
+        <activity
+            android:name=".views.activity.AddressActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 收货地址 -->
+        </activity>
+        <activity
+            android:name=".views.activity.CouponsActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 优惠券 -->
+        </activity>
+        <activity
+            android:name=".views.activity.MagazineListActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 家居期刊列表 -->
+        </activity>
+        <activity
+            android:name=".views.activity.FurnitureListActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 家居场景列表 -->
+        </activity>
+        <activity
+            android:name=".views.activity.ProductInformationActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 商品详情 -->
+        </activity>
+        <activity
+            android:name=".views.activity.CommentsActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 商品评论 -->
+        </activity>
+        <activity
+            android:name=".views.activity.SpaceListActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 空间列表 -->
+        </activity>
+        <activity
+            android:name=".views.activity.SpaceDetailActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 空间详情 -->
+        </activity>
+        <activity
+            android:name=".views.activity.DesignerActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 设计师 -->
+        </activity>
+        <activity
+            android:name=".views.components.WebViewActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 富文本页面 -->
+        </activity>
+        <activity
+            android:name=".views.activity.MagazineDetailActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 文章详情页面 -->
+        </activity>
+        <activity
+            android:name=".commons.views.gallery.GalleryActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 图片预览页面 -->
+        </activity>
+        <activity
+            android:name=".views.activity.ScenePreviewActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 场景图预览页面 -->
+        </activity>
+        <activity
+            android:name=".views.activity.EditAddressActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 收货地址编辑页面 -->
+        </activity>
+        <activity
+            android:name=".views.activity.CreateAddressActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 新增收货地址页面 -->
+        </activity>
+        <activity
+            android:name=".views.activity.ExcellentGoodsActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 点赞商品详情 -->
+        </activity>
+        <activity
+            android:name=".views.activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 忘记密码 -->
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".views.activity.AllDesignActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 设计师所有作品 -->
+        </activity>
+        <!-- 选择图片 -->
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.SingleInputActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.SelectSexActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.MyOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 订单确认界面 -->
+        <activity
+            android:name=".views.activity.ConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".views.activity.LikesItemActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 我喜欢的点击Item详情界面 -->
+        </activity>
+        <activity
+            android:name=".views.activity.OrderCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.PayCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.CollectionActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 我的收藏 -->
+        </activity>
+        <activity
+            android:name=".views.activity.OrderCommentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.AfterSaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.PendingPayOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.HelpCenterActivity"
+            android:screenOrientation="portrait">
+
+            <!-- 帮助中心 -->
+        </activity>
+        <activity
+            android:name=".views.activity.PaySuccessActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 搜索 -->
+        <activity
+            android:name=".views.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.ShopCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.PendingDeliverOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.PendingReceiveOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.FinishedOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.AfterSaleDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.ExpressInformationActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.hande.goochao.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".views.activity.ApplyAfterSaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.ModifyPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.SubmitOrderCommentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.MyCommentsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.NewProductInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.NewSpaceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.activity.DesignPlanDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".views.activity.SaleGiftActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".views.activity.PersonPlanActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 信鸽点击回调 -->
+        <receiver
+            android:name=".commons.xinge.MessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+
+
+                <!-- 华为必须,用于接收TOKEN -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <!-- 华为必须，用于接收消息 -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+
+            </intent-filter>
+
+            <!-- 小米必须注册的 -->
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+
+
+        <activity android:name=".views.activity.XinGeLogActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.hande.push"
+                    android:path="/notify_detail"
+                    android:scheme="gcscheme" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v4">
+            <intent-filter android:priority="0x7fffffff">
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!--&lt;!&ndash; 【必须】 信鸽service &ndash;&gt;-->
+        <!--<service-->
+        <!--android:name="com.tencent.android.tpush.service.XGPushServiceV4"-->
+        <!--android:exported="true"-->
+        <!--android:persistent="true"-->
+        <!--android:process=":xg_service_v4" />-->
+
+
+        <!-- 【必须】 提高service的存活率 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+                <!-- 【必须】 请修改为当前APP包名 .PUSH_ACTION, 如demo的包名为：com.qq.xgdemo -->
+                <action android:name="com.hande.goochao.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+        <!--点击通知以后发出的广播接收者  推荐动态注册，安卓8.0以后不支持静态注册 -->
+        <receiver android:name="com.hande.goochao.commons.ZhichiNotificationReceiver" >
+            <intent-filter>
+                <action android:name="sobot_notification_click" />
+            </intent-filter>
+        </receiver>
+
+        <!--&lt;!&ndash; 【必须】 【注意】authorities修改为 包名.AUTH_XGPUSH, 如demo的包名为：com.qq.xgdemo&ndash;&gt;-->
+        <!--<provider-->
+        <!--android:name="com.tencent.android.tpush.XGPushProvider"-->
+        <!--android:authorities="com.hande.goochao.AUTH_XGPUSH"-->
+        <!--android:exported="true"/>-->
+
+        <!--&lt;!&ndash; 【必须】 【注意】authorities修改为 包名.TPUSH_PROVIDER, 如demo的包名为：com.qq.xgdemo&ndash;&gt;-->
+        <!--<provider-->
+        <!--android:name="com.tencent.android.tpush.SettingsContentProvider"-->
+        <!--android:authorities="com.hande.goochao.TPUSH_PROVIDER"-->
+        <!--android:exported="false" />-->
+
+        <!--&lt;!&ndash; 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V3, 如demo的包名为：com.qq.xgdemo&ndash;&gt;-->
+        <!--<provider-->
+        <!--android:name="com.tencent.mid.api.MidProvider"-->
+        <!--android:authorities="com.hande.goochao.TENCENT.MID.V3"-->
+        <!--android:exported="true" >-->
+        <!--</provider>-->
+
+
+        <!--&lt;!&ndash; 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 &ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="XG_V2_ACCESS_ID"-->
+        <!--android:value="2100314068" />-->
+        <!--&lt;!&ndash; 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 &ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="XG_V2_ACCESS_KEY"-->
+        <!--android:value="AM5VI537UL5W" />-->
+
+        <!-- 消息中心 -->
+        <activity
+            android:name=".views.activity.InformationCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 构巢精选 -->
+        <activity
+            android:name=".views.activity.RecommendsMessageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 活动通知 -->
+        <activity
+            android:name=".views.activity.SalesMessageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 系统消息 -->
+        <activity
+            android:name=".views.activity.SystemMessageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 方案列表 -->
+        <activity
+            android:name=".views.activity.PlanListActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

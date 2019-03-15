@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/WHITE"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/inspiration_head_view"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp">
+
+                <com.androidkun.xtablayout.XTabLayout
+                    android:id="@+id/inspiration_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="10dp"
+                    android:stretchColumns="*"
+                    app:xTabDividerWidth="0dp"
+                    app:xTabDividerWidthWidthText="true"
+                    app:xTabIndicatorColor="@color/Black_Gray"
+                    app:xTabIndicatorHeight="3dp"
+                    app:xTabMode="scrollable"
+                    app:xTabSelectedTextColor="@color/Black_Gray"
+                    app:xTabSelectedTextSize="@dimen/xx_large"
+                    app:xTabTextAppearance="@style/TabLayoutTextStyle"
+                    app:xTabTextColor="@color/new_product_detail"
+                    app:xTabTextSelectedBold="true"
+                    app:xTabTextSize="@dimen/large" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layChoose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <LinearLayout
+                    android:id="@+id/choose_key_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/WHITE"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/txtCondition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="全风格"
+                        android:textColor="@color/TAB_GRAY"
+                        android:textSize="@dimen/normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/top_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="-4dp"
+                android:background="@color/Line_DarkGray_Color" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/new_search" />
+
+    </FrameLayout>
+
+
+    <com.hande.goochao.views.widget.ViewPagerSlide
+        android:id="@+id/inspiration_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</LinearLayout>

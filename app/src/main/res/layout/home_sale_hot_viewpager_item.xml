@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hande.goochao.views.components.ZoomView
+        android:id="@+id/sale_hot_zoom_view"
+        android:layout_width="match_parent"
+        android:clickable="false"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        app:scaleView="@id/hot_goods_cover">
+
+    <ImageView
+        android:id="@+id/hot_goods_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/hot_goods_title"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/Black_Gray"
+            android:textSize="@dimen/large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/hot_goods_desc"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/new_product_detail"
+            android:textSize="@dimen/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/hot_goods_price"
+                android:textColor="@color/nice_red"
+                android:textSize="@dimen/large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/hot_goods_old_price"
+                android:visibility="gone"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/new_product_detail"
+                android:textSize="@dimen/medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </com.hande.goochao.views.components.ZoomView>
+
+</LinearLayout>

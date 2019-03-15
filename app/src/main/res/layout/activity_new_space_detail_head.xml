@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.hande.goochao.views.widget.OnScrollChangeView
+        android:id="@+id/scroll_view_space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/space_detail_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY" />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/space_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/Black_Gray"
+                android:textSize="@dimen/x_large" />
+
+            <TextView
+                android:id="@+id/space_detail_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/TAB_GRAY"
+                android:textSize="@dimen/normal" />
+
+            <RelativeLayout
+                android:id="@+id/to_space_h5_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/txt_no_use_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/Black_Gray"
+                    android:textSize="@dimen/normal" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_toRightOf="@+id/txt_no_use_space"
+                    android:src="@mipmap/check_more_arrow_right" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/Line_DarkGray_Color" />
+
+            <com.hande.goochao.views.components.NoScrollGridView
+                android:id="@+id/space_detail_image_grid_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:verticalSpacing="5dp"
+                android:layout_marginRight="15dp"
+                android:splitMotionEvents="false"
+                android:numColumns="2">
+
+            </com.hande.goochao.views.components.NoScrollGridView>
+
+            <RelativeLayout
+                android:id="@+id/jump_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="35dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/no_use_title_space"
+                    android:background="@mipmap/line" />
+
+                <TextView
+                    android:id="@+id/no_use_title_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent"
+                    android:textColor="@color/Black_Gray"
+                    android:textSize="@dimen/normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/no_use_title_space"
+                    android:background="@mipmap/line" />
+
+            </RelativeLayout>
+
+            <com.hande.goochao.views.components.NoScrollListView
+                android:id="@+id/new_space_detail_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="35dp"
+                android:divider="@color/Line_DarkGray_Color"
+                android:dividerHeight="0.5dp">
+
+            </com.hande.goochao.views.components.NoScrollListView>
+
+        </LinearLayout>
+
+    </com.hande.goochao.views.widget.OnScrollChangeView>
+
+    <RelativeLayout
+        android:id="@+id/layTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/icon_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/new_space_back" />
+
+        <ImageView
+            android:id="@+id/share_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/back_icon_white_press" />
+
+    </RelativeLayout>
+
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/new_space_detail_load_fail_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/WHITE"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+    <ImageView
+        android:id="@+id/loading_space_page"
+        android:visibility="visible"
+        android:clickable="true"
+        android:background="@mipmap/loading_page_space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

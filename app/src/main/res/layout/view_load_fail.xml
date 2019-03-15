@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingBottom="100dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:clickable="true"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@mipmap/load_fair"/>
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/reload_txt"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/Line_DarkGray_Color"
+        android:textSize="@dimen/large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击刷新"/>
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/second_txt"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/Line_DarkGray_Color"
+        android:textSize="@dimen/large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="召唤页面回来"/>
+
+    <Button
+        android:id="@+id/reload_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:background="@color/BLACK"
+        android:text="重新加载"
+        android:textColor="@color/WHITE" />
+
+</LinearLayout>

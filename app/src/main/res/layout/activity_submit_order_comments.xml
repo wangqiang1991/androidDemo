@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Line_Color"
+    android:orientation="vertical"
+    tools:context="com.hande.goochao.views.activity.SubmitOrderCommentsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="对该商品是否满意？"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/x_large" />
+
+        <TextView
+            android:id="@+id/sub_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_text"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
+            android:text="请您对该商品进行评分"
+            android:textColor="@color/DEFAULT_GRAY"
+            android:textSize="@dimen/normal" />
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="@style/myRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/sub_title_text"
+            android:layout_alignParentRight="true"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:progressTint="@color/BLACK"
+            android:rating="5"
+            android:stepSize="1.0" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/message_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:gravity="top"
+            android:hint="请您再此写下您对该商品的评价吧~"
+            android:maxLength="300"
+            android:minLines="5"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/normal" />
+
+        <com.hande.goochao.views.components.ImageBox
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="3dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:verticalSpacing="3dp">
+
+        </com.hande.goochao.views.components.ImageBox>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/address_bt_select"
+        android:text="提交评价"
+        android:textColor="@color/WHITE"
+        android:textSize="@dimen/normal" />
+
+</LinearLayout>

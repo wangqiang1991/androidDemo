@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/goods_item_background"
+        android:orientation="vertical">
+
+        <com.hande.goochao.views.components.ZoomView
+            android:id="@+id/similar_product_zoom_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:scaleView="@id/item_cover">
+
+            <ImageView
+                android:id="@+id/item_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp" />
+
+        </com.hande.goochao.views.components.ZoomView>
+
+        <TextView
+            android:id="@+id/similar_product_name"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/Black_Gray"
+            android:textSize="@dimen/large" />
+
+        <LinearLayout
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/similar_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#F75151"
+                android:textSize="@dimen/normal" />
+
+            <TextView
+                android:id="@+id/old_price_plan"
+                android:layout_marginLeft="2dp"
+                android:visibility="gone"
+                android:textColor="@color/new_product_detail"
+                android:textSize="@dimen/small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!--<TextView-->
+            <!--android:id="@+id/zhe_kou_coupon"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="15dp"-->
+            <!--android:background="@mipmap/combined_shape_new"-->
+            <!--android:gravity="center"-->
+            <!--android:text="折扣"-->
+            <!--android:textColor="@color/WHITE"-->
+            <!--android:textSize="8sp"-->
+            <!--android:visibility="gone" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/man_jian_coupon"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:background="@mipmap/combined_shape_new"-->
+            <!--android:gravity="center"-->
+            <!--android:text="满减"-->
+            <!--android:textColor="@color/WHITE"-->
+            <!--android:textSize="8sp"-->
+            <!--android:visibility="gone" />-->
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/zhe_kou_coupon"
+            android:gravity="center"
+            android:textSize="@dimen/x_small"
+            android:background="#F94E4E"
+            android:textColor="@color/WHITE"
+            android:layout_width="45dp"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:id="@+id/man_jian_coupon"
+            android:visibility="invisible"
+            android:textSize="@dimen/x_small"
+            android:textColor="#F94E4E"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:background="@drawable/sale_red_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rainbow_tag"
+        android:text="搭配优惠"
+        android:visibility="gone"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:background="@mipmap/rainbow_tag"
+        android:textColor="@color/WHITE"
+        android:textSize="@dimen/x_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/design_select_view"
+        android:src="@mipmap/new_select"
+        android:layout_gravity="right"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp" />
+
+</FrameLayout>
+

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_display_name">构巢</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- 图片部分添加string -->
+    <string name="all">全部</string>
+    <string name="region">区域</string>
+    <string name="style">风格</string>
+    <string name="findpicture">搜索图片</string>
+    <string-array name="all">
+        <item>all of them</item>
+        <item>积赞定制</item>
+        <item>可售卖</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="alert_title">构巢</string>
+    <string name="alert_positive">确定</string>
+    <string name="alert_neutral">取消</string>
+
+    <string name="recommend">— 为您推荐 —</string>
+    <string name="learnMore">查看更多</string>
+
+    <string name="sure">确定</string>
+
+    <item type="id" name="tag_image" />
+</resources>

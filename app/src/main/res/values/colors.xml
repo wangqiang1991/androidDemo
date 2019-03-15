@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--构巢色系设置-->
+    <color name="BLACK">#000000</color>
+    <color name="Black_Gray">#343434</color>
+    <color name="TAB_BAR_COLOR">#f5f5f5</color>
+    <color name="Default_Gray">#606060</color>
+    <color name="More_Blue">#435c9d</color>
+    <color name="Line_Color">#f2f2f2</color>
+    <color name="Line_DarkGray_Color">#dddddd</color>
+    <color name="No_Data_Color">#9a9a9a</color>
+    <color name="WHITE">#FFFFFF</color>
+    <color name="green">#75d36e</color>
+
+    <color name="colorPrimary">@color/WHITE</color>
+    <color name="colorPrimaryDark">#353535</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bar_tint">#44B77E</color>
+    <color name="DEFAULT_BGCOLOR">#edeeef</color>
+    <!--//默认蓝色-->
+    <color name="DEFAULT_BLUE_NORMAL">#028ce6</color>
+    <!--//高亮蓝色-->
+    <color name="DEFAULT_BLUE_FOUCS">#d2ebf0</color>
+    <!-- 默认橘红色 -->
+    <color name="DEFAULT_ORANGE_NORMAL">#d43c33</color>
+    <!--//灰色线条颜色-->
+    <color name="LINE_GRAY">#eeeeee</color>
+    <!--//默认浅灰色-->
+    <color name="DEFAULT_GRAY">#606060</color>
+    <!--//透明深灰色-->
+    <color name="BLACK_GRAY_TRANS">#99272727</color>
+    <!--//Item点击灰色-->
+    <color name="ITEM_FOUCS_GRAY">#f8f8f8</color>
+    <!-- 红色 -->
+    <color name="red">#FF0000</color>
+    <!--//删除默认红色-->
+    <color name="DELETE_NORMAL_RED">#d43c33</color>
+    <!--//删除高亮红色-->
+    <color name="DELETE_FOUCS_RED">#e64a45</color>
+    <!-- MainActivity Tab默认字体颜色 -->
+    <color name="TAB_GRAY">#666666</color>
+    <!-- 黄色 -->
+    <color name="yellow">#fa6120</color>
+    <!--置灰按钮灰-->
+    <color name="gray_add">#cacaca</color>
+
+
+    <color name="user_header_default_background">#ecf1f6</color>
+    <color name="like_background">#575757</color>
+    <color name="like_item_background">#dedede</color>
+    <!-- 透明色 -->
+    <color name="transparent">#00000000</color>
+
+    <color name="black_button_normal">#333435</color>
+    <color name="black_button_selected">#666666</color>
+    <color name="new_product_detail">#999999</color>
+    <color name="item_back_f6f6f6">#F6F6F6</color>
+    <color name="color_f9f9f9">#F9F9F9</color>
+    <color name="alpha_30_999999">#4D999999</color>
+    <color name="actionsheet_blue">#4A90E2</color>
+    <color name="actionsheet_gray">#999999</color>
+    <color name="actionsheet_delete">#F98484</color>
+    <color name="nice_red">#F75151</color>
+    <color name="black_red">#F98484</color>
+    <color name="color_30_999999">#4D999999</color>
+</resources>

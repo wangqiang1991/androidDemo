@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hande.goochao.views.components.ZoomView
+        android:id="@+id/link_goods_list_zoom_view"
+        app:scaleView="@id/link_product_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/link_product_cover"
+            android:layout_marginRight="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/txt_scene"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/link_product_name"
+                android:textColor="@color/Black_Gray"
+                android:textSize="@dimen/large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:id="@+id/link_product_desc"
+                android:textColor="@color/new_product_detail"
+                android:textSize="@dimen/medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/link_product_price"
+                    android:textColor="@color/Black_Gray"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textSize="@dimen/normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/space_old_price"
+                    android:layout_marginLeft="2dp"
+                    android:visibility="gone"
+                    android:textColor="@color/new_product_detail"
+                    android:textSize="@dimen/small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/space_discount_view"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:textSize="@dimen/x_small"
+                android:background="#F94E4E"
+                android:textColor="@color/WHITE"
+                android:layout_width="45dp"
+                android:layout_height="15dp" />
+
+            <TextView
+                android:id="@+id/space_sale_out_view"
+                android:visibility="invisible"
+                android:textSize="@dimen/x_small"
+                android:textColor="#F94E4E"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/sale_red_border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </com.hande.goochao.views.components.ZoomView>
+
+</LinearLayout>

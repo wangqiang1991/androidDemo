@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.hande.goochao.views.components.ZoomView
+            android:id="@+id/inspiration_article_zoom_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:scaleView="@id/inspiration_article_cover">
+
+            <ImageView
+                android:background="@drawable/corners_view"
+                android:id="@+id/inspiration_article_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </com.hande.goochao.views.components.ZoomView>
+
+        <TextView
+            android:id="@+id/type_name"
+            android:textSize="@dimen/small"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="bottom|right"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:enabled="false"
+            android:background="@drawable/home_fragment_recommend_bt"
+            android:text="期刊"
+            android:textColor="@color/WHITE"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="@color/item_back_f6f6f6"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/Black_Gray"
+            android:textSize="@dimen/large"
+            android:id="@+id/article_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

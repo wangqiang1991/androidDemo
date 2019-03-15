@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/xx_large"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:src="@mipmap/register_back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center">
+
+        <FrameLayout
+            android:id="@+id/phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_view_border"
+                android:drawableLeft="@mipmap/signup_input_icon_phone"
+                android:drawablePadding="8dp"
+                android:hint="请输入手机号"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:paddingBottom="12dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="12dp"
+                android:textColor="@color/WHITE"
+                android:textColorHint="@color/WHITE"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/large" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/verification_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_layout"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/verification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_view_border"
+                android:drawableLeft="@mipmap/signup_input_icon_yanzheng"
+                android:drawablePadding="8dp"
+                android:hint="请输入验证码"
+                android:maxLength="6"
+                android:inputType="phone"
+                android:paddingBottom="12dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="12dp"
+                android:textColor="@color/WHITE"
+                android:textColorHint="@color/WHITE"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/large" />
+
+            <TextView
+                android:id="@+id/txtGetCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="7dp"
+                android:background="#A6ffffff"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="8dp"
+                android:text="发送验证码"
+                android:textColor="@color/Black_Gray" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verification_layout"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_view_border"
+                android:drawableLeft="@mipmap/login_input_icon_lock"
+                android:drawablePadding="8dp"
+                android:hint="设置6-20位密码"
+                android:maxLength="20"
+                android:inputType="textPassword"
+                android:paddingBottom="12dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="12dp"
+                android:textColor="@color/WHITE"
+                android:textColorHint="@color/WHITE"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/large" />
+        </FrameLayout>
+
+        <!--<TextView-->
+            <!--android:textColor="#d8d8d8"-->
+            <!--android:text="注册代表您已同意《构巢用户协议》"-->
+            <!--android:textSize="@dimen/large"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_below="@id/password_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:id="@+id/user_agreement"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="注册代表您已同意"
+                android:textSize="@dimen/large"
+                android:textColor="#d8d8d8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/agreement"
+                android:text="《构巢用户协议》"
+                android:textColor="#d8d8d8"
+                android:textSize="@dimen/large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/login_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password_layout"
+            android:layout_marginTop="100dp">
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_button_bg"
+                android:gravity="center"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="马上加入，构造完美生活"
+                android:textColor="@color/WHITE"
+                android:textSize="@dimen/large" />
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

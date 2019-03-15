@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    <com.hande.goochao.views.components.CustomGridView
+        android:id="@+id/categroyMainview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:horizontalSpacing="2dp"
+        android:splitMotionEvents="false"
+        android:numColumns="3"
+        android:background="@color/Line_Color"
+        android:verticalSpacing="2dp">
+
+    </com.hande.goochao.views.components.CustomGridView>
+
+    <TextView
+        android:id="@+id/recommendTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@color/Black_Gray"
+        android:textSize="@dimen/large"
+        android:text="@string/recommend"/>
+
+</LinearLayout>

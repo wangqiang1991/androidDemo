@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/goods_detail_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Line_Color">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/recommend_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!--推荐的RecyclerView-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:background="@color/WHITE"
+        android:splitMotionEvents="false" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <!--底部的客服 购物车 加入购物车 立即购买-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Line_Color"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/WHITE"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/custom_layout"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/nav_icon_service" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客服" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/shopping_cat"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shop_cart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="购物车" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <com.hande.goochao.commons.controller.BadgeView
+                        android:id="@+id/shopping_goods_count"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="right|top"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:textSize="@dimen/x_small" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/outside_join_to_shopping_cat"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:clickable="false"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/No_Data_Color">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="已下架"-->
+                <!--android:textSize="@dimen/large" />-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/outside_buy_now"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/Black_Gray">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="立即购买"
+                android:textColor="@color/WHITE"
+                android:textSize="@dimen/large" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/outside_goods_off"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/No_Data_Color"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="已下架"
+                android:textColor="@color/WHITE"
+                android:textSize="@dimen/large" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--点击领取优惠券后弹出的界面-->
+    <RelativeLayout
+        android:id="@+id/coupon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </RelativeLayout>
+
+    <!--展示商品详情的界面-->
+    <RelativeLayout
+        android:id="@+id/show_goods_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </RelativeLayout>
+
+    <!--加载失败的界面-->
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/load_fail_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+</RelativeLayout>

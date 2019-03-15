@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/WHITE"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:clickable="true"
+        android:id="@+id/select_view"
+        android:layout_width="40dp"
+        android:layout_height="120dp">
+
+    <ImageView
+        android:id="@+id/select_button"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/high_dp_default_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:clickable="false"
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/goods_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/pulled_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/goods_off" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/sellout_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/sell_out" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/noStorage_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/goods_not_enough" />
+
+        <ImageView
+            android:id="@+id/gary_mirror_view"
+            android:visibility="gone"
+            android:background="@color/color_30_999999"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/goods_title"
+                android:textSize="@dimen/normal"
+                android:textColor="@color/Black_Gray"
+                android:text="汉斯编制休闲椅"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/style_id"
+                    android:textSize="@dimen/small"
+                    android:background="@drawable/order_good_item_style_bg"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:textColor="@color/new_product_detail"
+                    android:text="汉斯"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/sub_id"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/small"
+                    android:background="@drawable/order_good_item_style_bg"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_toRightOf="@+id/style_id"
+                    android:textColor="@color/new_product_detail"
+                    android:text="汉斯"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/noStorage_hint"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:textSize="@dimen/x_small"
+                android:textColor="@color/nice_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/Black_Gray"
+                android:textSize="@dimen/normal"
+                android:text="¥ "
+                android:id="@+id/icon"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_toEndOf="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_price"
+                    android:textColor="@color/Black_Gray"
+                    android:textSize="@dimen/normal"
+                    android:text="2075"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/old_price"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"
+                    android:textColor="@color/new_product_detail"
+                    android:textSize="@dimen/small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/sale_out_price"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"
+                    android:textColor="#F94E4E"
+                    android:textSize="@dimen/x_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/X"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/normal"
+                android:text="x"
+                android:layout_toStartOf="@+id/item_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="visible"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/normal"
+                android:text="1"
+                android:id="@+id/item_count"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.hande.goochao.views.widget.NumberEdit
+                android:visibility="visible"
+                android:id="@+id/edit_view"
+                android:clickable="true"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            </com.hande.goochao.views.widget.NumberEdit>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

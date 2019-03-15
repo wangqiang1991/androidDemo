@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/mirror_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:alpha="0"
+        android:background="@color/Black_Gray"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#f9f9f9">
+
+            <TextView
+                android:textColor="@color/BLACK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="房间区域"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/x_large" />
+
+            <ImageView
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/closeRegion"
+                android:clickable="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_close_fine" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/LINE_GRAY" />
+
+        <ListView
+            android:divider="@color/LINE_GRAY"
+            android:dividerHeight="0.5dp"
+            android:id="@+id/popview"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/WHITE">
+
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corners_view"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/collection_article_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/collection_type_name"
+            android:textSize="@dimen/small"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:layout_gravity="bottom|right"
+            android:enabled="false"
+            android:background="@drawable/home_fragment_recommend_bt"
+            android:text="期刊"
+            android:textColor="@color/WHITE"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/collection_article_desc"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="@dimen/large"
+        android:background="@color/item_back_f6f6f6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

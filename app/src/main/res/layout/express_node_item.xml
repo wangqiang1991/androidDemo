@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/layNodeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgNode"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/green_node" />
+
+        <TextView
+            android:id="@+id/txtNodeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="节点名称"
+            android:textColor="@color/DEFAULT_GRAY"
+            android:textSize="@dimen/normal" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layDate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/layNodeName"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="2018-01-01 00:00:00"
+            android:textColor="@color/DEFAULT_GRAY"
+            android:textSize="@dimen/normal" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/layDate"
+        android:layout_alignTop="@id/layNodeName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:background="#73ca50" />
+
+
+</RelativeLayout>

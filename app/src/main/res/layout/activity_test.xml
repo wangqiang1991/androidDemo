@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hande.goochao.views.activity.TestActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <com.hande.goochao.views.components.ZoomView
+            android:id="@+id/zoom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/More_Blue"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:scaleView="@id/image"
+            app:duration="200"
+            app:scale="0.95"
+            android:paddingTop="120dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@mipmap/loading_back" />
+
+            <Button
+                android:id="@+id/test_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="900dp" />
+
+        </com.hande.goochao.views.components.ZoomView>
+
+    </ScrollView>
+
+
+</FrameLayout>

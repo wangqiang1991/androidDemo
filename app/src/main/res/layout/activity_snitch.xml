@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Line_Color">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <FrameLayout
+            android:id="@+id/name_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的姓名"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/Black_Gray"/>
+                <EditText
+                    android:singleLine="true"
+                    android:maxLength="16"
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="@dimen/normal"
+                    android:hint="(必填)"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Line_Color"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/phone_layout"
+            android:layout_below="@+id/name_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的联系方式"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/Black_Gray"/>
+                <EditText
+                    android:singleLine="true"
+                    android:maxLength="11"
+                    android:digits="0123456789"
+                    android:id="@+id/input_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="@dimen/normal"
+                    android:hint="(必填)"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/division_layout1"
+            android:layout_below="@id/phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/Line_Color"></FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/textarea_title_layout"
+            android:layout_below="@id/division_layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/Black_Gray"
+                    android:text="您的意见"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/textarea_layout"
+            android:layout_below="@id/textarea_title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:background="@color/WHITE">
+            <EditText
+                android:id="@+id/textarea"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:focusable="true"
+                android:maxLength="200"
+                android:background="@null"
+                android:textSize="@dimen/normal"
+                android:hint="谢谢您愿意花时间来让构巢变得更好"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/input_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="@dimen/large"
+                android:focusable="false"
+                android:text="提 交"
+                android:textColor="@color/WHITE"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@color/Black_Gray"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

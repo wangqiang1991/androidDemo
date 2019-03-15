@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/shou_huo_ren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="收货人"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/large" />
+
+            <EditText
+                android:id="@+id/new_receiver_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLength="16"
+                android:singleLine="true"
+                android:textSize="@dimen/normal"
+                android:theme="@style/MyEditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/Line_DarkGray_Color"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/lian_xi_dian_hua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="联系电话"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/large" />
+
+            <EditText
+                android:id="@+id/new_receiver_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:maxLength="11"
+                android:textSize="@dimen/normal"
+                android:theme="@style/MyEditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/Line_DarkGray_Color"></LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/open_window"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/sheng_shi_qv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:text="省、市、区县"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/large" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/white_view3"
+                android:textSize="@dimen/medium" />
+
+            <View
+                android:id="@+id/white_view3"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/open_window_image" />
+
+            <ImageView
+                android:id="@+id/open_window_image"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/me_btn_arrow_right" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/Line_DarkGray_Color"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/xiang_xi_di_zhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="详细地址"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/large" />
+
+            <EditText
+                android:id="@+id/new_receiver_all_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:maxLength="70"
+                android:singleLine="true"
+                android:textSize="@dimen/normal"
+                android:theme="@style/MyEditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#f9f9f9"></LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/she_zhi_mo_ren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:text="设置默认"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/large" />
+
+            <Switch
+                android:id="@+id/set_default_bt"
+                android:layout_width="40dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/address_btn_setting_close"
+                android:thumb="@null"
+                android:track="@null" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f9f9f9" />
+
+            <Button
+                android:id="@+id/save_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/address_bt_select"
+                android:text="保 存"
+                android:textColor="@color/WHITE"
+                android:textSize="@dimen/normal" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.hande.goochao.views.components.LoadingView
+        android:id="@+id/edit_address_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadingView>
+
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/edit_address_load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+</RelativeLayout>

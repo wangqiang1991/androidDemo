@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/mirror_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:alpha="0"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+            <TextView
+                android:background="@color/WHITE"
+                android:textColor="@color/BLACK"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="所在地区"
+                android:gravity="center"
+                android:textSize="@dimen/xx_large" />
+
+        <com.hande.goochao.views.widget.AddressPickerView
+            android:background="@color/WHITE"
+            android:id="@+id/apvAddress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+        </com.hande.goochao.views.widget.AddressPickerView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

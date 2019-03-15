@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/new_home_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hande.goochao.views.widget.GoochaoListView
+            android:id="@+id/new_home_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/WHITE"
+            android:divider="@null"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:splitMotionEvents="false" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <ImageView
+        android:id="@+id/red_bag_icon"
+        android:clickable="false"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:background="@drawable/home_red_bag_press"
+        android:layout_marginBottom="80dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp" />
+
+    <View
+        android:id="@+id/click_view"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="80dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp" />
+    
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/load_fail_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/WHITE"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+    <com.hande.goochao.views.components.LoadingView
+        android:background="@color/WHITE"
+        android:id="@+id/new_home_fragment_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.hande.goochao.views.components.LoadingView>
+
+</FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/coupon_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:background="@color/WHITE"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/large"
+            android:textColor="@color/BLACK"
+            android:textStyle="bold"/>
+
+        <TextView android:id="@+id/coupon_des"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:background="@color/WHITE"
+            android:textSize="@dimen/medium"
+            android:textColor="@color/Default_Gray"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"/>
+
+        <TextView android:id="@+id/coupon_time"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:background="@color/WHITE"
+            android:textSize="@dimen/medium"
+            android:textColor="@color/Black_Gray"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="-2dp"
+        android:background="@color/Black_Gray"/>
+
+</LinearLayout>

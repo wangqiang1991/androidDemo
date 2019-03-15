@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@color/WHITE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="110dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/good_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Black_Gray"
+                android:textSize="@dimen/large" />
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/new_goods_style_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Black_Gray"
+                    android:textSize="@dimen/medium" />
+
+                <TextView
+                    android:id="@+id/pop_plan_old_price"
+                    android:layout_marginLeft="2dp"
+                    android:visibility="gone"
+                    android:textColor="@color/new_product_detail"
+                    android:textSize="@dimen/small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/sale_out_plan_item"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"
+                    android:textColor="#F94E4E"
+                    android:textSize="@dimen/x_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/yixuan_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已选："
+                    android:textColor="@color/new_product_detail"
+                    android:textSize="@dimen/medium" />
+
+                <TextView
+                    android:id="@+id/new_goods_style_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/yixuan_id"
+                    android:singleLine="true"
+                    android:textColor="@color/new_product_detail"
+                    android:textSize="@dimen/medium" />
+
+                <TextView
+                    android:id="@+id/sale_out_text"
+                    android:textSize="@dimen/small"
+                    android:textColor="@color/nice_red"
+                    android:text="暂无库存"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/new_goods_style_subName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_goods_style_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@+id/yixuan_id"
+                    android:singleLine="true"
+                    android:textColor="@color/new_product_detail"
+                    android:textSize="@dimen/medium" />
+
+                <ImageView
+                    android:id="@+id/sale_out_image"
+                    android:visibility="gone"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/new_goods_style_name"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/no_count"
+                    android:layout_marginTop="2dp"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.hande.goochao.views.widget.SkuView
+                    android:id="@+id/skuView_pop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp">
+
+                </com.hande.goochao.views.widget.SkuView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/shuliang_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="数量"
+                        android:textColor="@color/new_product_detail"
+                        android:textSize="@dimen/normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/new_minus_goods"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@color/Line_Color"
+                        android:gravity="center"
+                        android:text="—"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/normal" />
+
+                    <TextView
+                        android:id="@+id/new_goods_number"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="#F9F9F9"
+                        android:gravity="center"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/normal" />
+
+                    <TextView
+                        android:id="@+id/new_add_goods"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@color/Line_Color"
+                        android:gravity="center"
+                        android:text="＋"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/new_goods_style_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/goods_detail_background"
+            android:scaleType="fitXY" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="10dp"
+        android:background="@color/Line_Color"/>
+</FrameLayout>

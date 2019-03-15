@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hande.goochao.views.components.HeaderGridView
+        android:id="@+id/collection_picture_grid_view"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitMotionEvents="false"
+        android:numColumns="3">
+
+    </com.hande.goochao.views.components.HeaderGridView>
+
+    <com.hande.goochao.views.components.LoadFailView
+        android:id="@+id/collection_picture_load_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.LoadFailView>
+
+    <com.hande.goochao.views.components.LoadingView
+        android:background="@color/WHITE"
+        android:id="@+id/collection_picture_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.hande.goochao.views.components.LoadingView>
+
+    <com.hande.goochao.views.components.refresh.NoDataTwoLineView
+
+        android:id="@+id/collection_pic_noDataView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:visibility="gone">
+
+    </com.hande.goochao.views.components.refresh.NoDataTwoLineView>
+
+</RelativeLayout>

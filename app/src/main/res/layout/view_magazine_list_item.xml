@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/Line_Color">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        >
+
+        <com.hande.goochao.views.components.ZoomView
+            android:id="@+id/magazine_list_zoom_view"
+            app:scaleView="@id/magazine_img"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/magazine_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.hande.goochao.views.components.ZoomView>
+
+        <TextView
+            android:id="@+id/magazine_description"
+            android:textSize="@dimen/normal"
+            android:textColor="@color/Default_Gray"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left" />
+
+    </LinearLayout>
+
+</LinearLayout>
